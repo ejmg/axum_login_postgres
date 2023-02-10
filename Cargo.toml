@@ -1,0 +1,16 @@
+[package]
+name = "axum_login_postgres"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.6.4"
+axum-login = { version = "0.4.1", features = ["postgres"] }
+rand = { version = "0.8.5", features = ["min_const_gen"] }
+serde = { version = "1.0.152", features = ["derive"] }
+sqlx = { version = "0.6.2", features = ["runtime-tokio-rustls", "postgres"] }
+tokio = { version = "1.24.2", features = ["full"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
